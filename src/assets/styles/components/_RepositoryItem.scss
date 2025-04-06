@@ -1,0 +1,69 @@
+// src/assets/styles/components/_RepositoryItem.scss
+.repository-item {
+    background-color: $card-background;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    padding: $spacing-lg;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+        color: $primary-color;
+        margin-bottom: $spacing-sm;
+
+        .dark-mode & {
+            color: $dark-primary-color;
+        }
+    }
+
+    p {
+        color: $text-color;
+        opacity: 0.8;
+        margin-bottom: $spacing-md;
+        font-size: $font-size-sm;
+        flex-grow: 1;
+
+        .dark-mode & {
+            color: $dark-text-color;
+        }
+    }
+
+    .repository-stats {
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-size-sm;
+        color: $text-color;
+        opacity: 0.8;
+        margin-top: auto;
+
+        .language,
+        .stars {
+            display: flex;
+            align-items: center;
+            gap: $spacing-xs;
+        }
+
+        .dark-mode & {
+            color: $dark-text-color;
+        }
+    }
+
+    .dark-mode & {
+        background-color: $dark-card-background;
+        border-color: $dark-border-color;
+
+        &:hover {
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+        }
+    }
+}

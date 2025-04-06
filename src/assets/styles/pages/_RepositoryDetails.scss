@@ -1,0 +1,169 @@
+// src/assets/styles/components/_RepositoryDetails.scss
+.repository-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: $spacing-lg;
+    background-color: $card-background;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    .back-button {
+        display: inline-flex;
+        align-items: center;
+        gap: $spacing-xs;
+        margin-bottom: $spacing-lg;
+        padding: $spacing-sm $spacing-md;
+        background-color: transparent;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        color: $primary-color;
+        font-size: $font-size-md;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+        }
+
+        .dark-mode & {
+            color: $dark-primary-color;
+            border-color: $dark-border-color;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+    }
+
+    h1 {
+        margin-bottom: $spacing-md;
+        color: $secondary-color;
+
+        .dark-mode & {
+            color: $dark-secondary-color;
+        }
+    }
+
+    .description {
+        margin-bottom: $spacing-lg;
+        color: $text-color;
+        opacity: 0.8;
+
+        .dark-mode & {
+            color: $dark-text-color;
+        }
+    }
+
+    .repo-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-lg;
+        margin-bottom: $spacing-lg;
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: $spacing-xs;
+
+            .label {
+                color: $primary-color;
+
+                .dark-mode & {
+                    color: $dark-primary-color;
+                }
+            }
+        }
+    }
+
+    .github-link {
+        display: inline-flex;
+        align-items: center;
+        gap: $spacing-xs;
+        padding: $spacing-sm $spacing-md;
+        background-color: $primary-color;
+        color: white;
+        border-radius: 4px;
+        margin-bottom: $spacing-xl;
+        transition: background-color 0.2s;
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        .dark-mode & {
+            background-color: $dark-primary-color;
+        }
+    }
+
+    h2 {
+        margin-bottom: $spacing-lg;
+        font-size: $font-size-lg;
+        color: $secondary-color;
+
+        .dark-mode & {
+            color: $dark-secondary-color;
+        }
+    }
+
+    .contributors-list {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+
+        .contributor {
+            display: flex;
+            align-items: center;
+            padding: $spacing-md;
+            border: 1px solid $border-color;
+            border-radius: 4px;
+            background-color: $card-background;
+
+            .avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: $spacing-md;
+            }
+
+            .contributor-info {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    color: $primary-color;
+                    font-weight: bold;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    .dark-mode & {
+                        color: $dark-primary-color;
+                    }
+                }
+
+                .commits {
+                    font-size: $font-size-sm;
+                    color: $text-color;
+                    opacity: 0.8;
+
+                    .dark-mode & {
+                        color: $dark-text-color;
+                    }
+                }
+            }
+
+            .dark-mode & {
+                background-color: $dark-card-background;
+                border-color: $dark-border-color;
+            }
+        }
+    }
+
+    .dark-mode & {
+        background-color: $dark-card-background;
+        border-color: $dark-border-color;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+}

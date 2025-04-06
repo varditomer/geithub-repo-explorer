@@ -1,0 +1,22 @@
+// src/assets/styles/components/_App.scss
+
+.app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $spacing-lg;
+
+    main {
+        padding-top: $spacing-lg;
+    }
+}
+
+.home-page {
+    h1 {
+        margin-bottom: $spacing-lg;
+        color: $primary-color;
+
+        .dark-mode & {
+            color: $dark-primary-color;
+        }
+    }
+}

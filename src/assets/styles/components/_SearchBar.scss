@@ -1,0 +1,45 @@
+// src/assets/styles/components/_SearchBar.scss
+
+.search-bar {
+    margin-bottom: $spacing-xl;
+
+    form {
+        display: flex;
+        gap: $spacing-md;
+
+        input {
+            flex: 1;
+            padding: $spacing-md;
+            border: 1px solid $border-color;
+            border-radius: 4px;
+            font-size: $font-size-md;
+            background-color: $card-background;
+            color: $text-color;
+
+            .dark-mode & {
+                background-color: $dark-card-background;
+                color: $dark-text-color;
+                border-color: $dark-border-color;
+            }
+        }
+
+        button {
+            padding: $spacing-md $spacing-lg;
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: $font-size-md;
+            transition: background-color 0.2s;
+
+            &:hover {
+                opacity: 0.9;
+            }
+
+            .dark-mode & {
+                background-color: $dark-primary-color;
+            }
+        }
+    }
+}

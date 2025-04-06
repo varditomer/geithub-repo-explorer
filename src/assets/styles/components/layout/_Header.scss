@@ -1,0 +1,40 @@
+// src/assets/styles/components/layout/_Header.scss
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-md 0;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: $spacing-lg;
+
+    .logo {
+        font-size: $font-size-lg;
+        font-weight: bold;
+        color: $primary-color;
+
+        .dark-mode & {
+            color: $dark-primary-color;
+        }
+    }
+
+    .theme-toggle {
+        background: transparent;
+        border: none;
+        color: $text-color;
+        font-size: $font-size-lg;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        .dark-mode & {
+            color: $dark-text-color;
+        }
+    }
+
+    .dark-mode & {
+        border-color: $dark-border-color;
+    }
+}

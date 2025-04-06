@@ -1,6 +1,41 @@
-/* base.scss */
+// src/assets/styles/basics/_base.scss
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    line-height: 1.6;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+    &.dark-mode {
+        background-color: $dark-background-color;
+        color: $dark-text-color;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Common classes
+.loading,
+.error,
+.no-results {
+    padding: $spacing-xl;
+    text-align: center;
+    font-size: $font-size-md;
+}
+
+.error {
+    color: #cb2431;
 }

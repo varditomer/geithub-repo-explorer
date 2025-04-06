@@ -1,10 +1,20 @@
+// src/assets/styles/main.scss
+
+// Setup
+@import "setups/variables";
+
 // Basics
-@use "basics/base";
+@import "basics/base";
 
 // Pages
-// @use "basics/base";
+@import "pages/Home";
+@import "pages/RepositoryDetails";
 
 // Components
-// @use "basics/base";
+@import "components/App";
+@import "components/SearchBar";
+@import "components/RepositoryList";
+@import "components/RepositoryItem";
 
-
+// Components/Layout
+@import "components/layout/Header";

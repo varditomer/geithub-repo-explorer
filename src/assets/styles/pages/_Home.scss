@@ -1,0 +1,25 @@
+// src/assets/styles/pages/_Home.scss
+.cache-notice {
+    margin-top: $spacing-md;
+    margin-bottom: $spacing-md;
+    padding: $spacing-md;
+    background-color: #f0f8ff;
+    border-left: 4px solid #58a6ff;
+    border-radius: 4px;
+
+    span {
+        display: flex;
+        align-items: center;
+        color: #0366d6;
+        font-weight: bold;
+    }
+
+    .dark-mode & {
+        background-color: #0d1f3a;
+        border-left-color: #58a6ff;
+
+        span {
+            color: #58a6ff;
+        }
+    }
+}

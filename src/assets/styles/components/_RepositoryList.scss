@@ -1,0 +1,33 @@
+// src/assets/styles/components/_RepositoryList.scss
+
+.repository-list {
+    .repository-controls {
+        margin-bottom: $spacing-lg;
+
+        button {
+            padding: $spacing-sm $spacing-md;
+            background-color: $card-background;
+            border: 1px solid $border-color;
+            color: $text-color;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: $font-size-sm;
+
+            &:hover {
+                opacity: 0.9;
+            }
+
+            .dark-mode & {
+                background-color: $dark-card-background;
+                color: $dark-text-color;
+                border-color: $dark-border-color;
+            }
+        }
+    }
+
+    .repositories {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: $spacing-lg;
+    }
+}
